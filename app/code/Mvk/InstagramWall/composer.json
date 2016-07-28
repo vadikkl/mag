@@ -1,0 +1,12 @@
+{
+  "name": "mvk/instagram-wall",
+  "type": "magento2-module",
+  "description": "Mvk Instagram Wall",
+  "version": "1.0.0",
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Mvk\\InstagramWall\\": ""
+    }
+  }
+}
