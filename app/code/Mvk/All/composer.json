@@ -1,0 +1,12 @@
+{
+  "name": "mvk/all",
+  "type": "magento2-module",
+  "description": "Mvk All",
+  "version": "1.0.0",
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Mvk\\All\\": ""
+    }
+  }
+}
