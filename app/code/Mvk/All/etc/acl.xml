@@ -4,11 +4,11 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="vkM_All::mvk" title="Mvk" sortOrder="10" />
+                <resource id="Mvk_All::mvk" title="Mvk" sortOrder="10" />
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Mvke_All::mvk_all" title="Mvk Section" sortOrder="50" />
+                            <resource id="Mvk_All::mvk_all" title="Mvk Section" sortOrder="50" />
                         </resource>
                     </resource>
                 </resource>
