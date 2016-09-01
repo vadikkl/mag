@@ -217,7 +217,7 @@
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">textRange</item>
                     <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Category ID</item>
+                    <item name="label" xsi:type="string" translate="true">ID</item>
                 </item>
             </argument>
         </column>
@@ -225,6 +225,9 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">text</item>
+                    </item>
                     <item name="sorting" xsi:type="string">asc</item>
                     <item name="label" xsi:type="string" translate="true">Title</item>
                 </item>
@@ -232,8 +235,20 @@
         </column>
         <column name="type">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="array">
+                    <item name="tag" xsi:type="array">
+                        <item name="value" xsi:type="string">tag</item>
+                        <item name="label" xsi:type="string" translate="true">Tag</item>
+                    </item>
+                    <item name="location" xsi:type="array">
+                        <item name="value" xsi:type="string">location</item>
+                        <item name="label" xsi:type="string" translate="true">Location</item>
+                    </item>
+                </item>
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                    <item name="dataType" xsi:type="string">select</item>
+                    <item name="filter" xsi:type="string">select</item>
                     <item name="sorting" xsi:type="string">asc</item>
                     <item name="label" xsi:type="string" translate="true">Type</item>
                 </item>
@@ -261,6 +276,12 @@
                     </item>
                 </item>
                 <item name="config" xsi:type="array">
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">select</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="required-entry" xsi:type="boolean">false</item>
+                        </item>
+                    </item>
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
                     <item name="dataType" xsi:type="string">select</item>
