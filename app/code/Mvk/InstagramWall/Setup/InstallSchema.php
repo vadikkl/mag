@@ -33,12 +33,6 @@ class InstallSchema implements InstallSchemaInterface
                 ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
                 'Entity Id'
             )->addColumn(
-                'store_id',
-                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
-                null,
-                ['unsigned' => true, 'nullable' => false],
-                'Store Id'
-            )->addColumn(
                 'title',
                 \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                 50,
@@ -56,12 +50,6 @@ class InstallSchema implements InstallSchemaInterface
                 null,
                 ['nullable' => false, 'unsigned' => true, 'default' => 0],
                 'Is Active'
-            )->addForeignKey(
-                $installer->getFkName('mvk_instagramwall_blocks', 'store_id', 'store', 'store_id'),
-                'store_id',
-                $installer->getTable('store'),
-                'store_id',
-                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
             )->addIndex(
                 $setup->getIdxName(
                     $installer->getTable('mvk_instagramwall_blocks'),

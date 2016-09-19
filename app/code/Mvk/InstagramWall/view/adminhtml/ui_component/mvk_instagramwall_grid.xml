@@ -77,19 +77,6 @@
                     <item name="columnsProvider" xsi:type="string">mvk_instagramwall_grid.mvk_instagramwall_grid.mvk_instagramwall_columns</item>
                 </item>
             </argument>
-            <filterSelect name="store_id">
-                <argument name="optionsProvider" xsi:type="configurableObject">
-                    <argument name="class" xsi:type="string">Magento\Store\Ui\Component\Listing\Column\Store\Options</argument>
-                </argument>
-                <argument name="data" xsi:type="array">
-                    <item name="config" xsi:type="array">
-                        <item name="provider" xsi:type="string">mvk_instagramwall_grid.mvk_instagramwall_grid.listing_top.listing_filters</item>
-                        <item name="dataScope" xsi:type="string">store_id</item>
-                        <item name="caption" xsi:type="string" translate="true">All Store Views</item>
-                        <item name="label" xsi:type="string" translate="true">Store View</item>
-                    </item>
-                </argument>
-            </filterSelect>
         </filters>
         <massaction name="listing_massaction">
             <argument name="data" xsi:type="array">
@@ -244,6 +231,10 @@
                         <item name="value" xsi:type="string">location</item>
                         <item name="label" xsi:type="string" translate="true">Location</item>
                     </item>
+                    <item name="user" xsi:type="array">
+                        <item name="value" xsi:type="string">user</item>
+                        <item name="label" xsi:type="string" translate="true">User</item>
+                    </item>
                 </item>
                 <item name="config" xsi:type="array">
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
@@ -251,15 +242,6 @@
                     <item name="filter" xsi:type="string">select</item>
                     <item name="sorting" xsi:type="string">asc</item>
                     <item name="label" xsi:type="string" translate="true">Type</item>
-                </item>
-            </argument>
-        </column>
-        <column name="store_id" class="Magento\Store\Ui\Component\Listing\Column\Store">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
-                    <item name="sortable" xsi:type="boolean">true</item>
-                    <item name="label" xsi:type="string" translate="true">Store View</item>
                 </item>
             </argument>
         </column>
